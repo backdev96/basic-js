@@ -23,15 +23,15 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function getDNSStats( domains ) {
-  let DNS = {} ;
+  let DNSMap = {} ;
   domains.map( function(element) { 
     let str = '';
     element.split('.').reverse().forEach( function(item ) {
       str = str + '.' + item ;
-      (DNS.hasOwnProperty(str)) ? DNS[str]++ : DNS[str] = 1;
+      (DNSMap.hasOwnProperty(str)) ? DNSMap[str]++ : DNSMap[str] = 1;
     });
   });
- return DNS
+ return DNSMap
 }
 
 module.exports = {
