@@ -17,7 +17,6 @@ const { NotImplementedError } = require('../extensions/index.js');
 function countCats(cubes) {
   let count = 0;
   flatCubes = cubes.flat();
-  console.log(flatCubes);
   for(var i = 0; i < flatCubes.length; i++) {
       if (flatCubes[i] === '^^'){
         count++;
