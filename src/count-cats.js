@@ -16,14 +16,14 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function countCats(cubes) {
   let count = 0;
-  for(var i = 0; i < cubes.length; i++) {
-    var cube = cubes[i];
-    for(var j = 0; j < cube.length; j++) {
-        display("cube[" + i + "][" + j + "] = " + cube[j]);
+  flatCubes = cubes.flat();
+  console.log(flatCubes);
+  for(var i = 0; i < flatCubes.length; i++) {
+      if (flatCubes[i] === '^^'){
+        count++;
+      }
     }
-}
-
-
+  return count;
 }
 
 module.exports = {
